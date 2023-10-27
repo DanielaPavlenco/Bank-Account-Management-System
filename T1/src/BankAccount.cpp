@@ -72,7 +72,7 @@ int main() {
     myAccount.displayAccountInfo();
 
     // Perform some transactions
-    myAccount.deposit(500.0);
+    myAccount.deposit(700.0);
     myAccount.withdraw(200.0);
 
     // Display updated account information
