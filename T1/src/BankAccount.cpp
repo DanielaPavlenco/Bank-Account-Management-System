@@ -42,9 +42,11 @@ BankAccount& BankAccount::operator=(const BankAccount& other) {
     accountNumber = other.accountNumber;
     accountHolder = other.accountHolder;
 
+
+    //Eliberaram memoria veche din heap si alocam memorie noua pentru balance
 }
 
-//Eliberaram memoria veche din heap si alocam memorie noua pentru balance
+
 
 
 
