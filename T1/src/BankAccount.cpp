@@ -35,7 +35,12 @@ BankAccount::BankAccount(const BankAccount& other) {
 }
 
 //Suprascrierea operatorului de atribuire
+BankAccount& BankAccount::operator=(const BankAccount& other) {
+    if(this==&other) {
+        return *this; //Evitam auto-atribuirea
+    }
 
+}
 
 //Eliberaram memoria veche din heap si alocam memorie noua pentru balance
 
