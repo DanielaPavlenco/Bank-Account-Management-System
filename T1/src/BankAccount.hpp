@@ -22,7 +22,7 @@ public:
     //  Eliberarea heap-ului în destructor
     ~BankAccount();
 
-    // Cerința 5: Suprascrierea copy constructorului
+    //Suprascrierea copy constructorului
     BankAccount(const BankAccount& other);
 
     // Metodă pentru a efectua un depozit în cont
