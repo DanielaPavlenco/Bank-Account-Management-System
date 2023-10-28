@@ -34,6 +34,14 @@ BankAccount::BankAccount(const BankAccount& other) {
     balance = new double(*(other.balance));
 }
 
+//Suprascrierea operatorului de atribuire
+
+
+//Eliberaram memoria veche din heap si alocam memorie noua pentru balance
+
+
+
+
 // Metodă pentru a efectua un depozit în cont
 void BankAccount::deposit(double amount) {
     if (amount > 0) {
