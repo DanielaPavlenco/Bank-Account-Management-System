@@ -44,12 +44,11 @@ BankAccount& BankAccount::operator=(const BankAccount& other) {
 
 
     //Eliberaram memoria veche din heap si alocam memorie noua pentru balance
+    delete balance;
+    balance = new double(*(other.balance));
+
+    return *this;
 }
-
-
-
-
-
 
 // Metodă pentru a efectua un depozit în cont
 void BankAccount::deposit(double amount) {
