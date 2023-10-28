@@ -39,6 +39,8 @@ BankAccount& BankAccount::operator=(const BankAccount& other) {
     if(this==&other) {
         return *this; //Evitam auto-atribuirea
     }
+    accountNumber = other.accountNumber;
+    accountHolder = other.accountHolder;
 
 }
 
