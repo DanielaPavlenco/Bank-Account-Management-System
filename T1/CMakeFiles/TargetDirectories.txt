@@ -1,0 +1,3 @@
+/mnt/d/T1/CMakeFiles/BankAccount.dir
+/mnt/d/T1/CMakeFiles/edit_cache.dir
+/mnt/d/T1/CMakeFiles/rebuild_cache.dir
