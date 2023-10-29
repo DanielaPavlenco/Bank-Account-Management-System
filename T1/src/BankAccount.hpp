@@ -10,20 +10,22 @@ private:
     double *balance;  // Folosim un pointer la double pentru a permite gestionarea memoriei dinamică
 
 public:
-    // Constructor pentru a inițializa contul bancar
+   // Constructor pentru a inițializa contul bancar
     BankAccount(const std::string& accNumber, const std::string& accHolder, double initialBalance);
 
-    // Încapsulare - Metode pentru a accesa datele private
+    // Destructor pentru a elibera memoria din heap
+    ~BankAccount();
+
+    // Copy constructor
+    BankAccount(const BankAccount& other);
+
+    // Operator de atribuire
+    BankAccount& operator=(const BankAccount& other);
+
+    // Metode pentru a accesa datele private
     const std::string& getAccountNumber() const;
     const std::string& getAccountHolder() const;
     double getBalance() const;
-
-    // Inițializarea membrilor din constructor
-    //  Eliberarea heap-ului în destructor
-    ~BankAccount();
-
-    //Suprascrierea copy constructorului
-    BankAccount(const BankAccount& other);
 
     // Metodă pentru a efectua un depozit în cont
     void deposit(double amount);
