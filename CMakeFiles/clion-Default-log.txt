@@ -1,4 +1,0 @@
-Cannot generate into D:\T1
-It is already used for project \mnt\d\T1
-
-Please either delete it manually or select another generation directory
