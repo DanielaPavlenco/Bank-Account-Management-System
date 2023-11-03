@@ -1,40 +1,43 @@
-#ifndef BANKACCOUNT_HPP
-#define BANKACCOUNT_HPP
+#pragma once //prevedem includerea multipla a acestui fisier
 
 #include <string>
 
-class BankAccount {
-private:
-    std::string accountNumber;
-    std::string accountHolder;
-    double *balance;  // Folosim un pointer la double pentru a permite gestionarea memoriei dinamică
+namespace BankAccounts {
 
-public:
-   // Constructor pentru a inițializa contul bancar
-    BankAccount(const std::string& accNumber, const std::string& accHolder, double initialBalance);
+    class BankAccount {
+    public:
+        //Constructorul clasei BankAccount
+        BankAccount(const std::string& accNumber, const std::string& accHolder, double initialBalance);
 
-    // Destructor pentru a elibera memoria din heap
-    ~BankAccount();
+        // Destructorul clasei BankAccount (marcat ca virtual pentru a permite suprascrierea în clasele derivate)
+        virtual ~BankAccount();  // Marcam destructorul ca fiind virtual
 
-    // Copy constructor
-    BankAccount(const BankAccount& other);
+        // Constructorul de mutare (move constructor) pentru clasa BankAccount
+        BankAccount(BankAccount&& other) noexcept;
 
-    // Operator de atribuire
-    BankAccount& operator=(const BankAccount& other);
+        // Metoda virtuală pentru a efectua un depozit în cont
+        virtual void deposit(double amount);  // Marcam deposit ca fiind virtual
 
-    // Metode pentru a accesa datele private
-    const std::string& getAccountNumber() const;
-    const std::string& getAccountHolder() const;
-    double getBalance() const;
+         // Metoda virtuală pentru a efectua o retragere din cont
+        virtual void withdraw(double amount);  // Marcam withdraw ca fiind virtual
 
-    // Metodă pentru a efectua un depozit în cont
-    void deposit(double amount);
+        // Metode pentru a obține numărul de cont, titularul și soldul
+        const std::string& getAccountNumber() const;
+        const std::string& getAccountHolder() const;
+        double getBalance() const;
 
-    // Metodă pentru a efectua o retragere din cont
-    void withdraw(double amount);
+          // Metode pentru a seta numărul de cont și titularul
+        void setAccountNumber(const std::string& accNumber);
+        void setAccountHolder(const std::string& accHolder);
 
-    // Metodă pentru a afișa informațiile despre cont
-    void displayAccountInfo();
-};
+        // Metodă pentru a afișa informațiile despre cont
+        void displayAccountInfo() const;
+    private:
+        std::string accountNumber;
+        std::string accountHolder;
 
-#endif
+        double* balance; // Soldul contului este stocat ca un pointer 
+                        //către un număr dublu pentru a permite gestionarea în heap
+    };
+
+}
