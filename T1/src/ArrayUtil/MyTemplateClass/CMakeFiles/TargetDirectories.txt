@@ -1,0 +1,3 @@
+/mnt/d/T1/src/MyTemplateClass/CMakeFiles/MyTemplateClass.dir
+/mnt/d/T1/src/MyTemplateClass/CMakeFiles/edit_cache.dir
+/mnt/d/T1/src/MyTemplateClass/CMakeFiles/rebuild_cache.dir

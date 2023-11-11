@@ -1,0 +1,2 @@
+/usr/bin/ar qc libMyTemplateClass.a CMakeFiles/MyTemplateClass.dir/MyTemplateClass.cpp.o
+/usr/bin/ranlib libMyTemplateClass.a
