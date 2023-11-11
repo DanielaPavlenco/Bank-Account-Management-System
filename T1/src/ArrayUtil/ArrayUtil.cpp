@@ -1,0 +1,1 @@
+// Acest fișier este gol. Funcția template este în fișierul header.

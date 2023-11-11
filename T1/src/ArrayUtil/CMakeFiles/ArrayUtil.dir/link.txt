@@ -1,0 +1,1 @@
+/usr/bin/c++ -rdynamic CMakeFiles/ArrayUtil.dir/main.cpp.o CMakeFiles/ArrayUtil.dir/ArrayUtil.cpp.o -o ArrayUtil  -lstdc++ 
