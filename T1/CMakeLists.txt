@@ -1,15 +1,6 @@
 cmake_minimum_required(VERSION 3.0)
+project(MyProject)
 
-project(BankAccountApp)
-
-# Specificați toate fișierele sursă
-file(GLOB SOURCES "src/*.cpp")
-
-# Adăugarea executabilului
-add_executable(BankAccount ${SOURCES})
-
-# Specificarea directorului pentru fișierele header
-target_include_directories(BankAccount PUBLIC "src")
-
-# Link-ul cu biblioteca iostream
-target_link_libraries(BankAccount PUBLIC "stdc++")
+add_subdirectory(src/ArrayUtil)
+add_subdirectory(src/BankAccount)
+add_subdirectory(src/MyTemplateClass)
