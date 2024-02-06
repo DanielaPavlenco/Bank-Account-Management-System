@@ -19,9 +19,8 @@ This is a simple C++ project for managing bank accounts. It allows users to crea
 4. Run `make` to build the project.
 5. Execute the compiled executable.
 
+   This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
 Example:
 ```bash
 ./bank_system
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
