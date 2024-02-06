@@ -1,4 +1,4 @@
-# Simple Bank Account Management System
+# Bank Account Management System
 
 This is a simple C++ project for managing bank accounts. It allows users to create accounts, deposit and withdraw money, and check their balance.
 
